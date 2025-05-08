@@ -1,0 +1,394 @@
+.layout {
+  display: grid;
+  grid-template: 74px 900px 650px 600px 300px 74px / 25fr 50fr 25fr;
+  grid-template-areas:
+    "banner banner banner"
+    "carousel carousel carousel"
+    "categories categories categories"
+    "favorites favorites favorites"
+    "footer footer footer"
+    "copyright copyright copyright";
+}
+
+body {
+  margin: 0;
+}
+
+.social-logos img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 25fr 50fr 25fr;
+  background: rgb(255, 181, 181);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 181, 181, 1) 0%,
+    rgba(255, 230, 230, 1) 50%,
+    rgba(255, 181, 181, 1) 100%
+  );
+  align-items: center;
+  justify-items: center;
+  grid-area: banner;
+}
+
+.sarina-regular {
+  font-family: "Sarina", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fe7200;
+}
+
+.logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.logo span {
+  margin: 10px;
+  font-size: 22px;
+}
+
+.menu a {
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem;
+  color: #fe7200;
+}
+
+.menu li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+
+.menu a:hover {
+  color: rgb(255, 64, 64);
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile span {
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+/* Carousel */
+
+.carousel {
+  grid-area: carousel;
+  position: relative;
+}
+
+.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  width: max-content;
+}
+.list img {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: large;
+}
+.dots {
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 20px;
+}
+.dots li.active {
+  width: 30px;
+}
+
+/* Categories */
+
+.categories {
+  position: relative;
+  display: grid;
+  grid-template-rows: 25fr 60fr 15fr;
+  grid-template-columns: 100%;
+  grid-area: categories;
+}
+
+.category-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem 2rem;
+  z-index: 9999;
+}
+
+.main-title-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories img {
+  width: 580px;
+  height: 476px;
+  object-fit: cover;
+}
+
+#brands img {
+  object-position: center;
+}
+
+#brands,
+#artisans,
+#artists {
+  position: relative;
+}
+
+.brand-titles {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.brand-titles span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#artisans img {
+  object-position: top;
+}
+
+#artists img {
+  object-position: bottom;
+}
+
+.playfair-display-categories {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 600;
+  font-style: italic;
+  color: #fe7200;
+}
+
+.playfair-display-category-names {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: aliceblue;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: aliceblue;
+}
+
+.background-categories {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 181, 181, 1) 0%,
+    rgba(255, 230, 230, 1) 100%
+  );
+  position: absolute;
+  bottom: 0;
+}
+
+/* Favorites */
+
+.favorites {
+  grid-area: favorites;
+  display: grid;
+}
+
+.favorite-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.favorites img {
+  border-radius: 100%;
+}
+
+.main-title-favorites {
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-title-favorites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playfair-display-favorites-title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+  line-height: normal;
+  font-size: 48px;
+  color: #ff4040;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+}
+
+.brand-names {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 20px 0px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-button {
+  border-radius: 100px;
+  padding: 15px 10px;
+  color: #ff4040;
+  background: #ffc9c9;
+  width: 150px;
+  border: 0px;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  background: rgb(248, 179, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 179, 128, 1) 0%,
+    rgba(255, 64, 64, 1) 100%
+  );
+  grid-area: footer;
+}
+
+.title {
+  display: inline-block;
+  color: aliceblue;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-left: 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.box a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.paragraph {
+  color: aliceblue;
+}
+
+.box div {
+  margin: 10px 0px;
+}
+
+.box {
+  margin: 100px;
+}
+
+.social-logos img {
+  object-fit: scale-down;
+  margin: 0.2rem;
+}
+
+.copyright {
+  background: linear-gradient(
+    90deg,
+    rgba(248, 179, 128, 1) 0%,
+    rgba(255, 64, 64, 1) 100%
+  );
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-area: copyright;
+}
+
+.copyright-text {
+  margin-left: 90px;
+}

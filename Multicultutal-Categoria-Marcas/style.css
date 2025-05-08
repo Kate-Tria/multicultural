@@ -1,0 +1,222 @@
+.layout {
+  display: grid;
+  /* grid-template-columns: 25fr 50fr 25fr;
+    grid-template-rows: 74px 800px 747px 630px 303px; */
+  grid-template: 74px 2100px 300px 74px / 25fr 50fr 25fr;
+  grid-template-areas:
+    "banner banner banner"
+    "contenido contenido contenido"
+    "footer footer footer"
+    "copyright copyright copyright";
+}
+
+body {
+  margin: 0;
+}
+
+.social-logos img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 25fr 50fr 25fr;
+  background: rgb(255, 181, 181);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 181, 181, 1) 0%,
+    rgba(255, 230, 230, 1) 50%,
+    rgba(255, 181, 181, 1) 100%
+  );
+  align-items: center;
+  justify-items: center;
+  grid-area: banner;
+}
+
+.sarina-regular {
+  font-family: "Sarina", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fe7200;
+}
+
+.logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.logo span {
+  margin: 10px;
+  font-size: 22px;
+}
+
+.menu a {
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem;
+  color: #fe7200;
+}
+
+.menu li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+
+.menu a:hover {
+  color: rgb(255, 64, 64);
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile span {
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+/*Contendio*/
+
+.contenido-principal {
+  display: grid;
+  grid-area: contenido;
+  grid-template-rows: 10fr 90fr;
+  grid-template-columns: 100%;
+}
+
+.titulo-artesanos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("Categorias.jpeg");
+  background-position: -300px -400px;
+  grid-area: 1/1/2/2;
+  height: 262px;
+}
+
+.fotos-artesanos {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  gap: 5rem;
+  flex-wrap: wrap;
+  align-content: auto;
+}
+
+.contenedor-artesanos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fotos-artesanos img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.playfair-display-artesanos {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 48px;
+  font-weight: 800;
+  font-style: normal;
+  color: #fff;
+}
+
+.lato-light-artesanos {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+}
+
+/* Pie de pagina */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  background: rgb(248, 179, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 179, 128, 1) 0%,
+    rgba(255, 64, 64, 1) 100%
+  );
+  grid-area: footer;
+}
+
+.titulo {
+  display: inline-block;
+  color: aliceblue;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-left: 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.box a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.parrafo {
+  color: aliceblue;
+}
+
+.box div {
+  margin: 10px 0px;
+}
+
+.box {
+  margin: 100px;
+}
+
+.social-logos img {
+  object-fit: scale-down;
+  margin: 0.2rem;
+}
+
+.copyright {
+  background: rgb(248, 179, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 179, 128, 1) 0%,
+    rgba(255, 64, 64, 1) 100%
+  );
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-area: copyright;
+}
+
+.copyright-text {
+  margin-left: 90px;
+}
